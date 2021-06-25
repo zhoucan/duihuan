@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>CCP自助兑换系统</title>
+  <link rel="stylesheet" href="icon/iconfont.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animate.min.css" />
+</head>
+
+<body>
+  <div class="login-box">
+    <!-- <h3 class="toptitle">CCP自助兑换系统</h3> -->
+    <div class="middle">
+      <div class="box-con tran" style="margin-left:0px;">
+          <!-- 获取验证码 -->
+        <div class="getqr-con f-l" style="display: none;">
+          <div class="form-group">
+            <input type="text" placeholder="请输入邮箱" class="email1"/>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="tran pr getqr">
+              <a href="javascript:;" class="tran">获取验证</a>
+              <img src="image/loading.gif" class="loading">
+            </button>
+          </div>
+          <div class="form-group getlogin">
+            <button class="tran pr ">
+              <a href="javascript:;" class="tran">已有帐号登录</a>
+            </button>
+          </div>
+        </div>
+        <!-- 注册 -->
+        <div class="register-con f-l">
+          <div class="form-group">
+            <input type="text" placeholder="请输入用户名" class="username" />
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="请输入密码" class="pswd" />
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="请输入邮箱" class="email2" style="width:180px"/>
+            <button type="button" class="f-r getqr" style="width: 110px;">获取验证码</button>
+          </div>
+          <!-- <div class="form-group">
+            <input type="number" placeholder="请输入手机号" class="iphone" />
+          </div> -->
+          <!-- <div class="form-group sex">
+            <strong>性 别: <font color="#ff0000">&nbsp;</font></strong>
+            <div class="fl">
+              <label><input type="radio" name="sex" value="0">男</label>
+              <label><input type="radio" name="sex" value="1">女</label>
+              <label><input type="radio" name="sex" value="2">保密</label>
+            </div>
+          </div> -->
+          <div class="form-group">
+            <input type="text" placeholder="请输入验证码" class="qrd" />
+          </div>
+          <div class="form-group">
+            <button type="submit" class="tran pr register">
+              <a href="javascript:;" class="tran">注册</a></a>
+              <img src="image/loading.gif" class="loading">
+            </button>
+          </div>
+          <div class="form-group getlogin">
+              <a href="javascript:;" class="tran">已有帐号？去登录</a>
+          </div>
+          
+        </div>
+
+        <!-- 登录 -->
+        <div class="login-con f-l">
+          <div class="form-group">
+            <input type="text" placeholder="请输入用户名" class="loginname" />
+          </div>
+            <div class="form-group">
+              <input type="password" placeholder="请输入密码" class="loginpswd" />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="tran pr  login">
+                <a href="javascript:;" class="tran">登录</a></a>
+                <img src="image/loading.gif" class="loading">
+              </button>
+            </div>
+            <div class="form-group getback">
+                <a href="javascript:;" class="tran">未登录？去注册</a>
+            </div>
+          </div>
+
+        <!-- 内容 -->
+        <div class="content f-l">
+         
+          <div class="form-group">
+            <div id="qrcode" style="width:180px; height:180px; margin:15px auto;"></div>
+            <p class="address">复制钱包地址充入要兑换的CCP：<br/><span class="cppAddress"></span></p>
+            <button type="submit" class="tran pr" style="margin-bottom: 10px;">
+              <a href="javascript:;" class="tran copytext">复制地址</a>
+            </button>
+            <button type="submit" class="tran pr bounceInDown Withdraw">
+              <a href="javascript:;" class="tran">提现</a>
+            </button>
+            <p class="money">余额：<span class="mymoney">0</span><span>KB</span></p>
+          </div>
+          <h4 style="color: #fff;">提示：2ccp等于3Kb</h2>
+          <button type="submit" class="tran pr logout">
+            <a href="javascript:;" class="tran">退出</a>
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <input type="text" class="email3" hidden>
+    <div id="HBox">
+      <ul id="list">
+        <li><input type="text" name="email" value="" class="ipt code" style="width: 160px;" placeholder="请输入验证码">  <button type="button" class="f-r getqr1" >获取验证码</button></li>
+        <li><input type="text" name="card" value="" class="ipt toAddress" placeholder="请输入钱包地址"></li>
+        <li><input type="text" name="card" value="" class="ipt amount" placeholder="请输入提现金额"></li>
+        <li><input type="button" value="确认" class="submitBtn"> <img src="image/loading.gif" class="loading"></li>
+      </ul>
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.hDialog.min.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
